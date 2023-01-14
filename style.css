@@ -1,0 +1,125 @@
+html, body {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100px;
+    width: auto;
+    background-color: aqua;
+}
+
+.logo {
+    background-image: url(logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 80px;
+    margin: 0 0 5px 5px;
+    margin-right: auto;
+}
+
+.whatsapp {
+    height: 40px;
+    width: 40px;
+    background-image: url(whatsapp.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 10px;
+    transition: 0.5s;
+}
+
+.whatsapp:hover {
+    transform: scale(1.3);
+} 
+
+.call {
+    height: 40px;
+    width: 40px;
+    background-image: url(call.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+
+.call:hover {
+    transform: scale(1.3);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    margin: 10px;
+}
+.item {
+    display: flex;
+    flex: 1 0 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: lime;
+    border-radius: 10px;
+}
+
+iframe {
+    width: 100%;
+    filter: invert(100%);
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.el{
+    height: 150px;
+    width: 150px;
+    position: relative;
+    color: white;
+    background-image: url(logo.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.el::before {
+    content: 'ASPA GROUP';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: scale(0);
+    transition: 0.5s;
+}
+.el:hover::before {
+    content: 'FullStack Developer';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    transform: rotateY(360deg);
+    transform: scale(1);
+    opacity: 80%;
+    border-radius: 50%;
+}
